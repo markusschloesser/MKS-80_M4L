@@ -15,6 +15,7 @@ AFAIK this is the first m4l device for the MKS-80 and I love using it with my re
 Changelog:
 1.0 initial release (internal v08)
 1.1 added Volume control in the GLOBAL section, minor cosmetic fixes, removed most of the initial values. (internal v10)
+1.2 fixed VCO2 range visualization (thanks to Source Audio from the Cycling forum!), fixed F ENV Polarity, it had the wrong parameter (v14)
 
 Known issues:
 1. "Tone control" doesn't change tones. If I am not mistaken, tone changes only work when the MKS-80 is in Midi mode II, while if you want to edit things, you need to be in Midi mode III. All other editors I tested have the same problem.
