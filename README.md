@@ -1,5 +1,8 @@
 # MKS-80_M4L
 Maxforlive device for controlling the Roland MKS-80 from Ableton / Max for Live
+<img width="1802" alt="image" src="https://github.com/markusschloesser/MKS-80_M4L/assets/59286549/21d20d5c-5b4e-4726-807e-ae2dab0960ef">
+<img width="639" alt="image" src="https://github.com/markusschloesser/MKS-80_M4L/assets/59286549/e271a6ef-a744-416d-8083-56cc23bcd391">
+
 
 This is a maxforlive device for the Roland MKS-80. With it you can control (nearly) every aspect of the, normally Sysex only, MKS-80 from Live.
 So you can now automate filter cutoff, tweak Envelopes, modulate LFO and fine tune etc.
