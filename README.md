@@ -38,7 +38,8 @@ v32: now bidirectional!!! :-)
       Unfortunately the MKS80 does not have an "edit buffer request" neither a way to ask it to send the parameters of a patch when a program change is send. So that's why you have to need to physically go to the MKS80.
 v35: now with additional Edit Buffer Import. There is a second IMPORT button, which enables sending edit buffer presets to the device. So you can directly send a MKS80 preset from Knobkraft (https://github.com/christofmuc/KnobKraft-orm) to the Maxforlive device, which will update all the dials etc AND SEND the patch to the MKS80. It will also store the preset in the device.
 So 1 button to receive from the MKS80 itself, another button to receive from Knobkraft.
-Also fixes to Upper/Lower Balance parameter.
+Also fixes to Upper/Lower Balance parameter. 
+And when importing from MKS80 original preset number is shown properly. There is NO preset number when importing from Knobkraft (because edit buffer)
 
 
 ATTENTION: to be able to use individual dials etc you need to enable "enable sysex output". It is enabled by default.
