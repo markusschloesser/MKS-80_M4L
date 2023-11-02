@@ -29,16 +29,19 @@ v14: fixed known VCO2 Range and and fixed wrong F ENV Polarity assignment
 
 v32: now bidirectional!!! :-)
 
-Now you can receive a preset from the MKS80, for that the Track the device is on, needs to be armed and of course the Midi input device needs to be set to the MKS80. 
-To receive a patch, enable the "enable Sysex receive from MKS80" button, and then select a preset ON THE MKS80. 
-After the patch is received, the button will turn itself off again in order to not run into Midi Loops. 
-I would also strongly recommend to disable "enable sysex output" while receiving. The devices Dials and controls will now reflect the state of the MKS80.
+      Now you can receive a preset from the MKS80, for that the Track the device is on, needs to be armed and of course the Midi input device needs to be set to the MKS80. 
+      To receive a patch, enable the "enable Sysex receive from MKS80" button, and then select a preset ON THE MKS80. 
+      After the patch is received, the button will turn itself off again in order to not run into Midi Loops. 
+      I would also strongly recommend to disable "enable sysex output" while receiving. The devices Dials and controls will now reflect the state of the MKS80.
+      
+      This is a huge advancement but also a little bit weird to use because of the way the MKS80 does(doesn't) support things.
+      Unfortunately the MKS80 does not have an "edit buffer request" neither a way to ask it to send the parameters of a patch when a program change is send. So that's why you have to need to physically go to the MKS80.
+v35: now with additional Edit Buffer Import. There is a second IMPORT button, which enables sending edit buffer presets to the device. So you can directly send a MKS80 preset from Knobkraft (https://github.com/christofmuc/KnobKraft-orm) to the Maxforlive device, which will update all the dials etc AND SEND the patch to the MKS80. It will also store the preset in the device.
+So 1 button to receive from the MKS80 itself, another button to receive from Knobkraft.
+Also fixes to Upper/Lower Balance parameter.
 
-This is a huge advancement but also a little bit weird to use because of the way the MKS80 does(doesn't) support things.
-Unfortunately the MKS80 does not have an "edit buffer request" neither a way to ask it to send the parameters of a patch when a program change is send. So that's why you have to need to physically go to the MKS80.
 
-
-ATTENTION: to be able to use individual dials etc you need to enable "enable sysex output".
+ATTENTION: to be able to use individual dials etc you need to enable "enable sysex output". It is enabled by default.
 
 HUGE thanks to "Source Audio" on the Cycling forum for all the help and patience with the device!! Really grateful!
 
