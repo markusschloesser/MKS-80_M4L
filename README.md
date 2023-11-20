@@ -23,7 +23,7 @@ AFAIK this is the first m4l device for the MKS-80 and I love using it with my re
 
 1.2 fixed VCO2 range visualization (thanks to Source Audio from the Cycling forum!), fixed F ENV Polarity, it had the wrong parameter (v14)
 
-from here on, I'll use the file version, the newest one being
+from here on, I'll use the file version
 
 v14: fixed known VCO2 Range and and fixed wrong F ENV Polarity assignment
 
@@ -44,6 +44,7 @@ And when importing from MKS80 original preset number is shown properly. There is
 v36: recall after saving project didn't work, should now be fixed (change sending format from F0 41 36 (240 65 54) to F0 41 35 (240 65 53)
 
 
+
 ATTENTION: to be able to use individual dials etc you need to enable "enable sysex output". It is enabled by default.
 
 HUGE thanks to "Source Audio" on the Cycling forum for all the help and patience with the device!! Really grateful!
@@ -51,5 +52,7 @@ HUGE thanks to "Source Audio" on the Cycling forum for all the help and patience
 For further issues/plans, check https://github.com/markusschloesser/MKS-80_M4L/issues
 
 If you like the device, you can support me by listening to my music at
+
 https://distrokid.com/hyperfollow/markusschloesser/personality-development
+
 https://distrokid.com/hyperfollow/markusschloesser/tag-und-nacht
