@@ -41,6 +41,8 @@ So 1 button to receive from the MKS80 itself, another button to receive from Kno
 Also fixes to Upper/Lower Balance parameter. 
 And when importing from MKS80 original preset number is shown properly. There is NO preset number when importing from Knobkraft (because edit buffer)
 
+v36: recall after saving project didn't work, should now be fixed (change sending format from F0 41 36 (240 65 54) to F0 41 35 (240 65 53)
+
 
 ATTENTION: to be able to use individual dials etc you need to enable "enable sysex output". It is enabled by default.
 
