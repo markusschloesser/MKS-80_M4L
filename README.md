@@ -13,9 +13,22 @@ I have put in a lot of annotations (the lower left window in Live), especially w
 Any parameter that starts with "F" is for the filter, so for example "F ENV Src" is the parameter to select the source for the filter envelope modulation. Anything with "A" is for the VCA/Amp.
 ALL parameters are mapped, properly numbered and can be automated. I have also put them in the proper order.
 
-AFAIK this is the first m4l device for the MKS-80 and I love using it with my rev 5.
 
-# Changelog:
+# How to use:
+1. To be able to use individual dials etc you need to enable "enable sysex output". It is enabled by default.
+2. You can receive a preset from the MKS80, for that the Track, the device is on, needs to be armed and of course the Midi input device needs to be set to the MKS80. 
+To receive a patch, enable the "enable Sysex receive from MKS80" button, and then select a preset **ON THE MKS80** (go to synth and press actual physical preset button).
+The devices dials and controls will now reflect the state of the MKS80.
+
+After the patch is received, the button will turn itself off again in order to not run into Midi Loops. 
+I would also strongly recommend to disable "enable sysex output" while receiving. 
+
+Unfortunately the MKS80 does not have an "edit buffer request" neither a way to ask it to send the parameters of a patch when a program change is send. So that's why you have to need to physically go to the MKS80.
+
+Edit Buffer Import: There is a second IMPORT button, which enables sending edit buffer presets to the device. So you can directly send a MKS80 preset from Knobkraft (https://github.com/christofmuc/KnobKraft-orm) to the Maxforlive device, which will update all the dials etc AND SEND the patch to the MKS80. It will also store the preset in the device.
+So 1 button to receive from the MKS80 itself, another button to receive from Knobkraft.
+
+## Changelog:
 
 1.0 initial release (internal v08)
 
@@ -29,15 +42,7 @@ v14: fixed known VCO2 Range and and fixed wrong F ENV Polarity assignment
 
 v32: now bidirectional!!! :-)
 
-      Now you can receive a preset from the MKS80, for that the Track the device is on, needs to be armed and of course the Midi input device needs to be set to the MKS80. 
-      To receive a patch, enable the "enable Sysex receive from MKS80" button, and then select a preset ON THE MKS80. 
-      After the patch is received, the button will turn itself off again in order to not run into Midi Loops. 
-      I would also strongly recommend to disable "enable sysex output" while receiving. The devices Dials and controls will now reflect the state of the MKS80.
-      
-      This is a huge advancement but also a little bit weird to use because of the way the MKS80 does(doesn't) support things.
-      Unfortunately the MKS80 does not have an "edit buffer request" neither a way to ask it to send the parameters of a patch when a program change is send. So that's why you have to need to physically go to the MKS80.
-v35: now with additional Edit Buffer Import. There is a second IMPORT button, which enables sending edit buffer presets to the device. So you can directly send a MKS80 preset from Knobkraft (https://github.com/christofmuc/KnobKraft-orm) to the Maxforlive device, which will update all the dials etc AND SEND the patch to the MKS80. It will also store the preset in the device.
-So 1 button to receive from the MKS80 itself, another button to receive from Knobkraft.
+v35: now with additional Edit Buffer Import. 
 Also fixes to Upper/Lower Balance parameter. 
 And when importing from MKS80 original preset number is shown properly. There is NO preset number when importing from Knobkraft (because edit buffer)
 
@@ -45,7 +50,7 @@ v36: recall after saving project didn't work, should now be fixed (change sendin
 
 
 
-ATTENTION: to be able to use individual dials etc you need to enable "enable sysex output". It is enabled by default.
+
 
 HUGE thanks to "Source Audio" on the Cycling forum for all the help and patience with the device!! Really grateful!
 
