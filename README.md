@@ -1,4 +1,4 @@
-# MKS-80_M4L
+# Maxforlive device for the Roland MKS-80
 Maxforlive device for controlling the Roland MKS-80 from Ableton / Max for Live
 <img width="1334" height="145" alt="image" src="https://github.com/user-attachments/assets/c4b785b0-abbc-4d5e-9182-846b84ae33c5" />
 <img width="1105" height="131" alt="image" src="https://github.com/user-attachments/assets/feca92ca-3c6a-4112-8168-c09ef4bc36e3" />
