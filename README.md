@@ -1,7 +1,9 @@
 # MKS-80_M4L
 Maxforlive device for controlling the Roland MKS-80 from Ableton / Max for Live
-<img width="1802" alt="image" src="https://github.com/markusschloesser/MKS-80_M4L/assets/59286549/21d20d5c-5b4e-4726-807e-ae2dab0960ef">
-<img width="639" alt="image" src="https://github.com/markusschloesser/MKS-80_M4L/assets/59286549/e271a6ef-a744-416d-8083-56cc23bcd391">
+<img width="1334" height="145" alt="image" src="https://github.com/user-attachments/assets/c4b785b0-abbc-4d5e-9182-846b84ae33c5" />
+<img width="1105" height="131" alt="image" src="https://github.com/user-attachments/assets/feca92ca-3c6a-4112-8168-c09ef4bc36e3" />
+<img width="949" height="350" alt="image" src="https://github.com/user-attachments/assets/9b7e2821-8483-4756-90ad-1f6d4269450c" />
+
 
 
 # MKS-80 Max for Live
@@ -10,9 +12,23 @@ A Max for Live device for editing and automating the **Roland MKS-80** from **Ab
 
 The MKS-80 primarily uses MIDI SysEx for editing. This device exposes (nearly, Tune Request doesn't work due to a bug in Ableton Live) all of its Patch and Tone parameters as Live controls, so you can automate filter cutoff, envelopes, LFOs, oscillator parameters and more, and use hardware controllers instead of relying on the MKS-80 front panel.
 
-**Latest device version: v47.** The current version receives compatible preset dumps automatically: you no longer have to enable separate MKS-80 or KnobKraft receive buttons.
+**Latest device version: v50.** The current version receives compatible preset dumps automatically: you no longer have to enable separate MKS-80 or KnobKraft receive buttons.
+## New interface
 
-> **A note about real-time MIDI:** SysEx editing works, but the MKS-80 can still stumble when a lot of MIDI arrives while it is playing notes. Fast parameter sweeps are possible; don't assume that heavy simultaneous note and SysEx traffic will always be perfectly timed.
+Four MGraphics/V8UI ADSR previews are embedded in the existing 170-pixel-high presentation UI: Upper Filter, Upper Amp, Lower Filter and Lower Amp.
+
+**Click `EDIT` in the top-right corner of any preview** to open the single floating ADSR editor. The pop-up contains four larger 395 x 170 interactive graphs, laid out as two rows (Upper / Lower) and two columns (Filter / Amp). Filter envelopes are teal; Amp envelopes are amber.
+
+### Dragging
+
+- **A peak:** drag horizontally to change Attack.
+- **D end:** drag horizontally to change Decay, and vertically to change Sustain.
+- **S plateau:** drag vertically to change Sustain.
+- **R endpoint:** drag horizontally to change Release.
+
+The horizontal axis is a *normalized visual depiction* of the MKS-80's 0–100 parameter values, **not a calibrated time in milliseconds**. Sustain height represents 0–100. A fixed segment depicts key hold: it is not an additional programmable envelope phase.
+
+> **A note about real-time MIDI:** SysEx editing works, but the MKS-80 can stumble when a lot of MIDI arrives while it is playing notes. Fast parameter sweeps are possible; don't assume that heavy simultaneous note and SysEx traffic will always be perfectly timed.
 
 ## Requirements
 
@@ -80,6 +96,7 @@ Automation and external-control ordering follow the parameter's **Recall Order**
 
 ## Versions and changes
 
+- **v50** — now with graphical ADSR Envelope editors for all 4 ENVs and an additional pop-up window for bigger and easier editing 
 - **v47** — Design changes
 - **v46** — Reordered all 131 remaining Live parameters (Upper then Lower, adjacent pairs) for recall and external-controller banks.
 - **v45** — Reduced APR spacing to 100 ms; removed obsolete receive/validator code and manual receive controls; standardized Upper/Lower parameter names and short names.
@@ -99,7 +116,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full version history and [v46 release n
 
 - A standard Program Change cannot request a complete edit-buffer dump. See [issue #5](https://github.com/markusschloesser/MKS-80_M4L/issues/5) for the proposed RQF/bank-dump workaround.
 - APR-only reception cannot identify the physical sender without a separate MIDI-port or source distinction.
-- Excessive real-time SysEx can still affect the MKS-80's response while playing.
+- Excessive real-time SysEx can affect the MKS-80's response while playing.
 
 Found something not working? Please [open an issue](https://github.com/markusschloesser/MKS-80_M4L/issues).
 
@@ -114,6 +131,7 @@ The project started as a Max for Live editor, with the following milestones:
 - **v35** — Added KnobKraft edit-buffer import; Upper/Lower Balance fix; correct original preset number for MKS-80 imports.
 
 Huge thanks to **Source Audio** on the [Cycling '74 forum](https://cycling74.com/forums/roland-mks-80-m4l-device-questions-critique-suggestion) for the help and patience with the device!
+I heavily relied on ChatGPT for the last couple of versions.
 
 ## Support the music
 
