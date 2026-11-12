@@ -39,7 +39,7 @@ The horizontal axis is a *normalized visual depiction* of the MKS-80's 0–100 p
 
 ## Installation and MIDI routing
 
-1. Download the newest `.amxd` (currently **`MKS-80 v47`**) from this repository or from the release assets, and drag it onto a MIDI track in Live.
+1. Download the newest `.amxd` (currently **`MKS-80 v50`**) from this repository or from the release assets, and drag it onto a MIDI track in Live.
 2. Configure the track and MIDI interface so the device can receive SysEx from the MKS-80 or KnobKraft. For incoming MIDI from the hardware, arm the track or otherwise enable MIDI monitoring, as appropriate for your Live setup.
 3. Configure MIDI output so that outgoing SysEx reaches the MKS-80.
 4. Turn on **Enable Sysex Out** when you want edits or imported KnobKraft presets to be sent to the hardware. **It starts ON when the device loads**.
